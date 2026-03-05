@@ -1,13 +1,14 @@
 from pathlib import Path
 import json 
 import joblib 
+import pandas
 
 class ResultsManager: 
     """
         Utility class that organizes and saves models, metrics, tables and plots for each algorithm  
     """
 
-    def _init_(self, model_name: str, base_dir = "../results/"):
+    def __init__(self, model_name: str, base_dir = "../../results/"):
         self.model_name = model_name
         self.base_dir = Path(base_dir)
         self.model_dir = self.base_dir / model_name
@@ -23,6 +24,7 @@ class ResultsManager:
 
     def load_model(self):
         path = self.model_dir / "model.pkl"
+        print(f"Path koju gledam: {path}")
 
         if path.exists():
             return joblib.load(path)
@@ -43,3 +45,9 @@ class ResultsManager:
         plt.close()
 
         print(f"Plot saved to {path}")
+
+    def save_dataframe(self, dataframe, name: str):
+        path = self.model_dir / f"{name}.csv"
+        dataframe.to_csv(path, index = False)
+
+        print(f"Dataframe saved to {path}")
