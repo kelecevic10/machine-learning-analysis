@@ -1,0 +1,7 @@
+{
+    "model": "svm_linear",
+    "accuracy": 0.41023454669917253,
+    "macro_f1": 0.22657656034107512,
+    "weighted_f1": 0.35216282989460357,
+    "training_time_seconds": 13744.909283638
+}
