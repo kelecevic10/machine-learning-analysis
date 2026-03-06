@@ -1,0 +1,7 @@
+{
+    "model": "naive_bayes",
+    "accuracy": 0.3133594341095512,
+    "macro_f1": 0.16686531361483908,
+    "weighted_f1": 0.3114372104579698,
+    "training_time_seconds": 2.0018672943115234
+}
