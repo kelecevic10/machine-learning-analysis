@@ -1,0 +1,7 @@
+{
+    "model": "gradient_boosting",
+    "accuracy": 0.43455390490830703,
+    "macro_f1": 0.29455074435722994,
+    "weighted_f1": 0.4344363952170593,
+    "training_time_seconds": 903.2436065673828
+}
